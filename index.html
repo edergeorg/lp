@@ -154,10 +154,10 @@
     .pillar-text { font-size: 0.95rem; color: var(--stone); line-height: 1.6; font-weight: 300; }
 
     /* ── FOTO STRIP ── */
-    .foto-strip { display: grid; grid-template-columns: 1fr 1fr; }
+    .foto-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 0 5rem 5rem; max-width: 1100px; margin: 0 auto; align-items: start; }
     .foto-strip-item { position: relative; aspect-ratio: 3/4; overflow: hidden; }
+    .foto-strip-item:last-child { margin-top: 5rem; }
     .foto-strip-item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; will-change: transform; }
-    .foto-strip img { width: 100%; height: 100%; object-fit: cover; }
 
     /* ── ÜBER ── */
     #ueber { background: var(--sage-pale); }
@@ -247,8 +247,8 @@
       .ablauf-grid, .preise-grid, .termin-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .leistungen-grid { grid-template-columns: 1fr; }
       .ueber-tag { right: 0; }
-      .foto-strip { height: 220px; }
-      .foto-strip img:last-child { display: none; }
+      .foto-strip { padding: 0 1.5rem 3rem; gap: 1rem; }
+      .foto-strip-item:last-child { margin-top: 3rem; }
       footer { flex-direction: column; gap: 1.2rem; padding: 1.8rem 1.5rem; text-align: center; }
     }
   </style>
