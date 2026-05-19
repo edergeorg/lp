@@ -165,6 +165,11 @@
     .ueber-img-wrap { aspect-ratio: 3/4; overflow: hidden; position: relative; }
     .ueber-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .ueber-tag { position: absolute; bottom: 2rem; right: -1.5rem; background: var(--sage); color: white; padding: 0.85rem 1.3rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .ueber-text { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.4rem; }
+    .ueber-cv { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.55rem; }
+    .ueber-cv-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.5rem; display: block; }
+    .ueber-cv-item { display: flex; gap: 1rem; align-items: baseline; font-size: 0.9rem; color: var(--stone); }
+    .ueber-cv-item span:first-child { font-size: 0.78rem; color: var(--sage-dark); white-space: nowrap; flex-shrink: 0; }
     .cv-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.7rem; border-top: 1px solid rgba(122,158,126,0.2); padding-top: 1.5rem; }
     .cv-item { display: flex; gap: 1.2rem; align-items: baseline; font-size: 0.95rem; color: var(--stone); }
     .cv-year { font-family: "Cormorant Garamond", serif; font-size: 1rem; color: var(--sage); min-width: 55px; flex-shrink: 0; }
@@ -447,6 +452,30 @@
     <picture><source srcset="assets/training.webp" type="image/webp"><img src="assets/training.jpg" alt="Training" /></picture>
   </div>
 </div>
+
+<!-- 4. ÜBER MICH -->
+<section id="ueber">
+  <div class="inner">
+    <div class="ueber-grid reveal">
+      <div class="ueber-img-wrap">
+        <picture><source srcset="assets/portrait.webp" type="image/webp"><img src="assets/portrait.jpg" alt="Lisa Posch, Physiotherapeutin in Wien" /></picture>
+        <div class="ueber-tag">Physiotherapeutin</div>
+      </div>
+      <div>
+        <span class="label">Zur Person</span>
+        <h2 class="title">Lisa <em>Posch</em></h2>
+        <div class="ueber-text">
+          <p class="body-text">Krafttraining und Boxen begleiten mich seit Jahren – diese eigene sportliche Erfahrung hilft mir, therapeutische Prozesse praxisnah und zielgerichtet zu gestalten. Ich verstehe, wie Belastung, Technik und Trainingssteuerung den Körper beeinflussen.</p>
+          <p class="body-text">Seit 2022 arbeite ich im Krankenhaus Nord in der Orthopädie und Traumatologie – von akuten Verletzungen über postoperative Versorgung bis hin zu komplexen Beschwerdebildern. Der direkte Austausch mit Patient:innen und das gemeinsame Erarbeiten von Lösungen sind der Kern meiner täglichen Arbeit.</p>
+          <p class="body-text">Mein Ziel ist es, Beschwerden gezielt zu reduzieren, Belastbarkeit aufzubauen und funktionale Bewegungen wiederherzustellen – individuell, strukturiert und evidenzbasiert. Ob Rückkehr in den Sport, berufliche Anforderungen oder mehr Bewegungsfreiheit im Alltag: ich orientiere mich an deinen Zielen.</p>
+        </div>
+        <div class="ueber-cv">
+          <span class="ueber-cv-label">Werdegang</span>
+          <div class="ueber-cv-item"><span>Seit 2022</span><span>Krankenhaus Nord – Orthopädie &amp; Traumatologie</span></div>
+          <div class="ueber-cv-item"><span>2023</span><span>Medizinische Trainingstherapie – Grundlagen</span></div>
+          <div class="ueber-cv-item"><span>2024–2026</span><span>Sportphysiotherapie in Ausbildung</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
