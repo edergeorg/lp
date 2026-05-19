@@ -90,6 +90,14 @@ Always weigh these when making architecture decisions:
 - **Risks first:** If a decision has downsides, name them before saying yes
 - **No flattery:** Skip "Großartige Idee!", "Absolut richtig!", and similar filler
 
+## Before Go-Live Checklist
+
+- [ ] **Replace `DOMAIN-PLACEHOLDER.at`** — appears 4× in `index.html`: canonical URL, og:url, og:image, JSON-LD url/image. Run: `grep -n DOMAIN-PLACEHOLDER index.html`
+- [ ] Set up Cloudflare Pages project and connect repo
+- [ ] Configure custom domain in Cloudflare DNS
+- [ ] Verify Lighthouse scores (Performance ≥ 90, SEO ≥ 95, Accessibility ≥ 90)
+- [ ] Test Appointmed booking link end-to-end
+
 ## Don'ts
 
 *(None defined yet — add here as the project evolves)*
