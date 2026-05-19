@@ -69,6 +69,7 @@
       --stone: #6b6b63;
       --charcoal: #2c2c2a;
       --warm-white: #fcfbf8;
+      --cream: #faf8f4;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; background: #1a1a18; overscroll-behavior: none; }
@@ -121,7 +122,7 @@
     .hero-title em { font-style: italic; color: var(--sage); }
     .hero-sub { font-size: 1.05rem; line-height: 1.75; color: var(--stone); font-weight: 300; max-width: 400px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.7s 0.5s forwards; }
     .hero-actions { display: flex; gap: 1.2rem; align-items: center; opacity: 0; animation: fadeUp 0.7s 0.65s forwards; }
-    .btn-primary { padding: 0.85rem 2rem; background: var(--sage); color: white; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-flex; align-items: center; gap: 0.6rem; }
+    .btn-primary { padding: 0.9rem 2rem; background: var(--sage); color: white; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-flex; align-items: center; gap: 0.6rem; }
     .btn-primary:hover { background: var(--sage-dark); transform: translateY(-1px); }
     .btn-ghost { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; transition: color 0.2s; }
     .btn-ghost:hover { color: var(--sage-dark); }
@@ -215,11 +216,11 @@
     .info-icon svg { width: 15px; height: 15px; }
     .info-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.15rem; }
     .booking-card { background: var(--sage-pale); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1.1rem; }
-    .booking-icon { margin-bottom: 0.2rem; }
+    .booking-icon { margin-bottom: 0.2rem; color: var(--sage); }
     .booking-card-label { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); }
     .booking-card-title { font-family: "Cormorant Garamond", serif; font-size: 1.8rem; font-weight: 300; line-height: 1.2; color: var(--charcoal); }
     .booking-card-text { font-size: 1rem; line-height: 1.75; color: var(--stone); font-weight: 300; }
-    .booking-btn { display: inline-flex; align-items: center; gap: 0.7rem; margin-top: 0.6rem; padding: 0.95rem 2rem; background: var(--sage); color: white; font-size: 0.88rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .booking-btn { display: inline-flex; align-items: center; gap: 0.7rem; margin-top: 0.6rem; padding: 0.9rem 2rem; background: var(--sage); color: white; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.15s; }
     .booking-btn:hover { background: var(--sage-dark); transform: translateY(-1px); }
     .booking-card-alt { font-size: 0.9rem; color: var(--stone); }
     .booking-card-alt a { color: var(--sage-dark); text-decoration: none; border-bottom: 1px solid rgba(79,113,82,0.25); }
@@ -427,15 +428,15 @@
               fill: rgba(122,158,126,0);
               transition: fill 0.6s ease;
             }
-            .vc1.drawn { stroke-dashoffset: 0; fill: rgba(122,158,126,0.06); transition: stroke-dashoffset 1s ease, fill 0.8s 0.6s ease; }
-            .vc2.drawn { stroke-dashoffset: 0; fill: rgba(122,158,126,0.06); transition: stroke-dashoffset 1s 0.4s ease, fill 0.8s 1s ease; }
-            .vc3.drawn { stroke-dashoffset: 0; fill: rgba(122,158,126,0.06); transition: stroke-dashoffset 1s 0.8s ease, fill 0.8s 1.4s ease; }
-            .vt { opacity: 0; transition: opacity 0.6s ease; }
+            .vc1.drawn { stroke-dashoffset: 0; fill: rgba(122,158,126,0.06); transition: stroke-dashoffset 0.7s ease, fill 0.6s 0.4s ease; }
+            .vc2.drawn { stroke-dashoffset: 0; fill: rgba(122,158,126,0.06); transition: stroke-dashoffset 0.7s 0.25s ease, fill 0.6s 0.65s ease; }
+            .vc3.drawn { stroke-dashoffset: 0; fill: rgba(122,158,126,0.06); transition: stroke-dashoffset 0.7s 0.5s ease, fill 0.6s 0.9s ease; }
+            .vt { opacity: 0; transition: opacity 0.5s ease; }
             .vt.shown { opacity: 1; }
-            .vt1.shown { transition-delay: 1.2s; }
-            .vt2.shown { transition-delay: 1.5s; }
-            .vt3.shown { transition-delay: 1.7s; }
-            .vt4.shown { transition-delay: 1.9s; }
+            .vt1.shown { transition-delay: 0.8s; }
+            .vt2.shown { transition-delay: 1.0s; }
+            .vt3.shown { transition-delay: 1.1s; }
+            .vt4.shown { transition-delay: 1.25s; }
           </style>
           <!-- r=85, Mittelpunkte so dass Überschneidung in der Mitte klar ist -->
           <circle class="vc1" cx="160" cy="100" r="85" stroke="#7a9e7e" stroke-width="1.2"/>
@@ -572,7 +573,7 @@
       </div>
       <div class="booking-card reveal">
         <div class="booking-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7a9e7e" stroke-width="1.3" stroke-linecap="round">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
             <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/>
             <line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/>
             <line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/>
@@ -700,7 +701,10 @@
   }
 
   window.addEventListener("scroll", () => {
-    document.getElementById("nav").style.padding = window.scrollY > 50 ? "0.9rem 5rem" : "1.4rem 5rem";
+    const scrolled = window.scrollY > 50;
+    const navEl = document.getElementById("nav");
+    navEl.style.paddingTop = scrolled ? "0.65rem" : "";
+    navEl.style.paddingBottom = scrolled ? "0.65rem" : "";
     if (!ticking) {
       requestAnimationFrame(updateParallax);
       ticking = true;
