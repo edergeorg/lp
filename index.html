@@ -193,6 +193,9 @@
     .preis-item:last-child { border-bottom: none; }
     .preis-dur { font-size: 0.95rem; color: rgba(255,255,255,0.45); }
     .preis-val { font-family: "Cormorant Garamond", serif; font-size: 1.5rem; font-weight: 300; color: #faf8f4; }
+    .preis-includes { list-style: none; margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; }
+    .preis-includes li { font-size: 0.88rem; color: rgba(255,255,255,0.4); padding-left: 1rem; position: relative; }
+    .preis-includes li::before { content: "–"; position: absolute; left: 0; color: var(--sage-light); }
 
     /* ── TERMIN ── */
     #termin { background: var(--warm-white); }
@@ -474,8 +477,9 @@
     <div class="preise-grid">
       <div class="preise-left reveal">
         <span class="label">Transparenz</span>
-        <h2 class="title" style="color:#faf8f4;">Preise</h2>
-
+        <h2 class="title">Preise</h2>
+        <p class="body-text">Klare Preise, keine versteckten Kosten. Jede Einheit beinhaltet ein individuelles Befundgespräch und einen auf dich abgestimmten Behandlungsplan.</p>
+        <p class="body-text" style="margin-top:1rem;">Auf Wunsch stelle ich dir eine Honorarnote aus, die du bei deiner privaten Krankenversicherung einreichen kannst.</p>
       </div>
       <div class="preis-cards reveal">
         <div class="preis-card">
@@ -488,35 +492,13 @@
             <li>Übungsprogramm für Zuhause</li>
           </ul>
         </div>
-        <div class="preis-card" style="margin-top:1.5px;">
+        <div class="preis-card">
           <span class="preis-cat">Hausbesuche</span>
           <div class="preis-item"><span class="preis-dur">60 Minuten</span><span class="preis-val">150 €</span></div>
           <ul class="preis-includes">
             <li>Therapie bei dir zu Hause</li>
             <li>Wien &amp; Umgebung</li>
           </ul>
-        </div>
-      </div>
-          <div class="preis-card">
-            <span class="preis-cat">Hausbesuche</span>
-            <div class="preis-item"><span class="preis-dur">60 Minuten</span><span class="preis-val">150 €</span></div>
-            <ul class="preis-includes">
-              <li>Therapie bei dir zu Hause</li>
-              <li>Wien &amp; Umgebung</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Foto mit CTA -->
-        <div class="preis-photo" style="min-height:320px;">
-          <picture><source srcset="assets/portrait.webp" type="image/webp"><img src="assets/portrait.jpg" alt="Lisa Posch" /></picture>
-          <div class="preis-photo-overlay"></div>
-          <div class="preis-photo-cta">
-            <p class="preis-cta-tagline">Bereit für<br><em style="font-style:italic;">deinen ersten</em><br>Termin?</p>
-            <a href="https://www.appointmed.com/booking/2401122-lisa-posch/user/2401123-lisa-posch" target="_blank" rel="noopener" class="preis-cta-btn">
-              Jetzt buchen
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
         </div>
       </div>
     </div>
