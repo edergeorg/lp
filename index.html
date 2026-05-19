@@ -165,7 +165,9 @@
     .ueber-img-wrap { position: relative; padding: 2.5rem 0 0 2.5rem; }
     .ueber-img-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 2.5rem; bottom: 8%; background: var(--sage-mist); z-index: 0; }
     .ueber-img-wrap img { position: relative; z-index: 1; width: 100%; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(44,44,42,0.13)); }
-    .ueber-tag { position: absolute; bottom: 2.5rem; right: 0; z-index: 2; background: var(--sage); color: white; padding: 0.85rem 1.3rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .ueber-tag { position: absolute; bottom: 2.5rem; right: 0; z-index: 2; background: var(--sage); color: white; padding: 0.85rem 1.3rem; display: flex; flex-direction: column; gap: 0.2rem; }
+    .ueber-tag-name { font-size: 0.82rem; letter-spacing: 0.08em; font-weight: 500; }
+    .ueber-tag-role { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
     .ueber-text { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.4rem; }
     .ueber-cv { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.55rem; }
     .ueber-cv-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.5rem; display: block; }
@@ -386,11 +388,14 @@
     <div class="ueber-grid reveal">
       <div class="ueber-img-wrap">
         <picture><source srcset="assets/portrait-nobg.webp" type="image/webp"><img src="assets/portrait-nobg.png" alt="Lisa Posch, Physiotherapeutin in Wien" /></picture>
-        <div class="ueber-tag">Physiotherapeutin</div>
+        <div class="ueber-tag">
+          <span class="ueber-tag-name">Lisa Posch, BSc</span>
+          <span class="ueber-tag-role">Physiotherapeutin</span>
+        </div>
       </div>
       <div>
         <span class="label">Zur Person</span>
-        <h2 class="title">Lisa <em>Posch</em></h2>
+        <h2 class="title">Bewegung ist <em>meine Leidenschaft</em></h2>
         <div class="ueber-text">
           <p class="body-text">Krafttraining und Boxen begleiten mich seit Jahren – diese eigene sportliche Erfahrung hilft mir, therapeutische Prozesse praxisnah und zielgerichtet zu gestalten. Ich verstehe, wie Belastung, Technik und Trainingssteuerung den Körper beeinflussen.</p>
           <p class="body-text">Seit 2022 arbeite ich im Krankenhaus Nord in der Orthopädie und Traumatologie – von akuten Verletzungen über postoperative Versorgung bis hin zu komplexen Beschwerdebildern. Der direkte Austausch mit Patient:innen und das gemeinsame Erarbeiten von Lösungen sind der Kern meiner täglichen Arbeit.</p>
