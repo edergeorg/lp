@@ -1,0 +1,9 @@
+<!-- Lisa Posch Physiotherapie | Author: Georg Eder | hallo@ederge.org -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="5" fill="#7a9e7e"/>
+  <!-- Leaf mark from brand logo, scaled and centered -->
+  <g transform="translate(16,16) scale(0.8) translate(-97,-23)">
+    <path d="M100 8C90 16 86 28 96 38C96 38 108 36 106 24C104 14 96 8 92 8" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M92 8C94 16 96 24 102 32" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>
