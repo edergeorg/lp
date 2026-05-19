@@ -160,11 +160,12 @@
     .foto-strip img { width: 100%; height: 100%; object-fit: cover; }
 
     /* ── ÜBER ── */
-    #ueber { background: var(--warm-white); }
-    .ueber-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: center; }
-    .ueber-img-wrap { aspect-ratio: 3/4; overflow: hidden; position: relative; }
-    .ueber-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-    .ueber-tag { position: absolute; bottom: 2rem; right: -1.5rem; background: var(--sage); color: white; padding: 0.85rem 1.3rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    #ueber { background: var(--sage-pale); }
+    .ueber-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
+    .ueber-img-wrap { position: relative; padding: 2.5rem 0 0 2.5rem; }
+    .ueber-img-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 2.5rem; bottom: 8%; background: var(--sage-mist); z-index: 0; }
+    .ueber-img-wrap img { position: relative; z-index: 1; width: 100%; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(44,44,42,0.13)); }
+    .ueber-tag { position: absolute; bottom: 2.5rem; right: 0; z-index: 2; background: var(--sage); color: white; padding: 0.85rem 1.3rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
     .ueber-text { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.4rem; }
     .ueber-cv { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.55rem; }
     .ueber-cv-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.5rem; display: block; }
@@ -384,7 +385,7 @@
   <div class="inner">
     <div class="ueber-grid reveal">
       <div class="ueber-img-wrap">
-        <picture><source srcset="assets/portrait.webp" type="image/webp"><img src="assets/portrait.jpg" alt="Lisa Posch, Physiotherapeutin in Wien" /></picture>
+        <picture><source srcset="assets/portrait-nobg.webp" type="image/webp"><img src="assets/portrait-nobg.png" alt="Lisa Posch, Physiotherapeutin in Wien" /></picture>
         <div class="ueber-tag">Physiotherapeutin</div>
       </div>
       <div>
