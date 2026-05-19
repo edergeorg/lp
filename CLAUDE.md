@@ -19,8 +19,20 @@ Include in the HTML comment header of `index.html`, in `<meta name="author">`, a
 - **Language:** Plain HTML5 / CSS3 / vanilla JS — single `index.html`, no build tools
 - **Fonts:** Google Fonts (Cormorant Garamond + DM Sans) via preconnect — no cost
 - **Booking:** Appointmed — external link/embed only, no API, no cost risk
-- **Hosting:** GitHub (Pages or similar)
+- **Hosting:** Cloudflare Pages
 - **No frameworks, no npm, no bundler** — keep it that way unless explicitly approved
+
+## Cloudflare Pages — Architecture Considerations
+
+Always weigh these when making architecture decisions:
+
+- **Assets:** Static files (images, fonts) go in the repo root or a `/assets` folder — Cloudflare serves them from its CDN edge automatically. Never embed assets as Base64 in HTML.
+- **Redirects / headers:** Use `_redirects` and `_headers` files (Cloudflare Pages syntax) — not `.htaccess` or server config.
+- **Cache headers:** Set long-lived `Cache-Control` on versioned assets (images, fonts) via `_headers`. HTML should use `no-cache` so updates propagate instantly.
+- **Workers / Functions:** Cloudflare Pages Functions (`/functions` directory) are available if server-side logic is ever needed — but add no Functions without prior approval, as they introduce complexity and potential cost.
+- **Custom domain:** DNS lives in Cloudflare — no external DNS provider needed.
+- **Build command:** None required for this static site. Leave build config empty in Cloudflare Pages dashboard.
+- **Cost:** Cloudflare Pages free tier covers this site easily (500 builds/month, unlimited requests). Workers requests beyond 100k/day would incur cost — name this if a Worker is proposed.
 
 ## Code Conventions
 
@@ -63,6 +75,8 @@ Include in the HTML comment header of `index.html`, in `<meta name="author">`, a
 |---|---|---|
 | Appointmed | Booking CTA link | None |
 | Google Fonts | Preconnect load | None |
+| Cloudflare Pages | Hosting + CDN | None (free tier) |
+| Cloudflare Workers | Only if added later | >100k req/day → cost |
 
 **Rule:** Before integrating any new external service or API, estimate the cost and name it explicitly before proceeding.
 
