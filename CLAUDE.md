@@ -93,6 +93,7 @@ Always weigh these when making architecture decisions:
 ## Before Go-Live Checklist
 
 - [ ] **Replace `DOMAIN-PLACEHOLDER.at`** — appears 4× in `index.html`: canonical URL, og:url, og:image, JSON-LD url/image. Run: `grep -n DOMAIN-PLACEHOLDER index.html`
+- [ ] **Replace `ADRESSE-PLACEHOLDER`** — appears in `impressum.html` and `datenschutz.html`. Run: `grep -rn ADRESSE-PLACEHOLDER .`
 - [ ] Set up Cloudflare Pages project and connect repo
 - [ ] Configure custom domain in Cloudflare DNS
 - [ ] Verify Lighthouse scores (Performance ≥ 90, SEO ≥ 95, Accessibility ≥ 90)
