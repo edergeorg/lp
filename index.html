@@ -154,6 +154,7 @@
     .pillar-text { font-size: 0.95rem; color: var(--stone); line-height: 1.6; font-weight: 300; }
 
     /* ── FOTO STRIP ── */
+    .foto-strip-wrap { background: var(--sage-pale); }
     .foto-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 0 5rem 5rem; max-width: 1100px; margin: 0 auto; align-items: start; }
     .foto-strip-item { position: relative; aspect-ratio: 3/4; overflow: hidden; }
     .foto-strip-item:last-child { margin-top: 5rem; }
@@ -478,6 +479,7 @@
 </section>
 
 <!-- FOTO STRIP -->
+<div class="foto-strip-wrap">
 <div class="foto-strip">
   <div class="foto-strip-item">
     <picture><source srcset="assets/behandlung.webp" type="image/webp"><img src="assets/behandlung.jpg" alt="Lisa Posch bei der physiotherapeutischen Behandlung" width="933" height="1400" /></picture>
@@ -485,6 +487,7 @@
   <div class="foto-strip-item">
     <picture><source srcset="assets/training.webp" type="image/webp"><img src="assets/training.jpg" alt="Medizinisches Training in der Physiotherapie" width="933" height="1400" /></picture>
   </div>
+</div>
 </div>
 
 <!-- 5. ABLAUF -->
