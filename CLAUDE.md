@@ -92,10 +92,10 @@ Always weigh these when making architecture decisions:
 
 ## Before Go-Live Checklist
 
-- [ ] **Replace `DOMAIN-PLACEHOLDER.at`** — appears 4× in `index.html`: canonical URL, og:url, og:image, JSON-LD url/image. Run: `grep -n DOMAIN-PLACEHOLDER index.html`
-- [ ] **Replace `ADRESSE-PLACEHOLDER`** — appears in `impressum.html` and `datenschutz.html`. Run: `grep -rn ADRESSE-PLACEHOLDER .`
-- [ ] Set up Cloudflare Pages project and connect repo
-- [ ] Configure custom domain in Cloudflare DNS
+- [x] **Domain: `www.lp-physiotherapie.at`** — set in canonical, og:url, og:image, JSON-LD, sitemap.xml, robots.txt
+- [x] **Adresse: Kenyongasse 3/3, 1070 Wien** — set in impressum.html, datenschutz.html, JSON-LD
+- [x] Set up Cloudflare Pages project and connect repo
+- [ ] Configure custom domain in Cloudflare DNS (waiting for nameserver propagation)
 - [ ] Verify Lighthouse scores (Performance ≥ 90, SEO ≥ 95, Accessibility ≥ 90)
 - [ ] Test Appointmed booking link end-to-end
 

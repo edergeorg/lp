@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://www.DOMAIN-PLACEHOLDER.at/sitemap.xml
+Sitemap: https://www.lp-physiotherapie.at/sitemap.xml
