@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow:
+Disallow: /CLAUDE.md
 
 Sitemap: https://www.lp-physiotherapie.at/sitemap.xml
