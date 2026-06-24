@@ -99,6 +99,17 @@ Always weigh these when making architecture decisions:
 - [ ] Verify Lighthouse scores (Performance ≥ 90, SEO ≥ 95, Accessibility ≥ 90)
 - [ ] Test Appointmed booking link end-to-end
 
+## Daten die aktuell gehalten werden müssen
+
+Bei Änderungen bitte folgende Stellen aktualisieren:
+
+| Datum | Inhalt | Stellen |
+|---|---|---|
+| Preise | 45 min 95 €, 60 min 120 €, Hausbesuch 150 € | `index.html` Preise-Section + FAQPage JSON-LD |
+| Öffnungszeiten | Montag 15:00–21:00 | `index.html` Termin-Section + JSON-LD openingHoursSpecification + FAQPage JSON-LD |
+| E-Mail | physiotherapie.posch@gmail.com | `index.html`, `impressum.html`, `datenschutz.html` |
+| Adresse | Kenyongasse 3/3, 1070 Wien | `impressum.html`, `datenschutz.html`, JSON-LD |
+
 ## Don'ts
 
 *(None defined yet — add here as the project evolves)*
