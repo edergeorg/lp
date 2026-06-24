@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#fcfbf8"/>
+  <!-- Sage accent left bar -->
+  <rect width="8" height="630" fill="#7a9e7e"/>
+  <!-- Sage accent bottom bar -->
+  <rect y="590" width="1200" height="40" fill="#f3f7f3"/>
+
+  <!-- Leaf mark (scaled up, centered-left) -->
+  <g transform="translate(600,260) scale(4.5) translate(-97,-23)">
+    <path d="M100 8C90 16 86 28 96 38C96 38 108 36 106 24C104 14 96 8 92 8" stroke="#7a9e7e" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M92 8C94 16 96 24 102 32" stroke="#7a9e7e" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Divider line -->
+  <line x1="360" y1="340" x2="840" y2="340" stroke="rgba(122,158,126,0.35)" stroke-width="1"/>
+
+  <!-- LISA POSCH -->
+  <text x="600" y="410" text-anchor="middle" font-family="Georgia, serif" font-size="62" font-weight="300" fill="#2c2c2a" letter-spacing="14">LISA POSCH</text>
+
+  <!-- PHYSIOTHERAPIE -->
+  <text x="600" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#7a9e7e" letter-spacing="10">PHYSIOTHERAPIE</text>
+
+  <!-- Tagline -->
+  <text x="600" y="530" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#6b6b63" font-weight="300" letter-spacing="2">Physiotherapie in Wien · 1070</text>
+
+  <!-- Domain -->
+  <text x="600" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="rgba(107,107,99,0.6)" letter-spacing="3">lp-physiotherapie.at</text>
+</svg>
