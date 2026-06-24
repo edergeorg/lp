@@ -167,7 +167,7 @@
     .ueber-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
     .ueber-img-wrap { position: relative; padding: 2.5rem 0 0 2.5rem; }
     .ueber-img-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 2.5rem; height: 90%; background: var(--sage-mist); z-index: 0; }
-    .ueber-img-wrap img { position: relative; z-index: 1; max-width: 100%; max-height: 560px; width: auto; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(44,44,42,0.13)); }
+    .ueber-img-wrap img { position: relative; z-index: 1; max-width: 100%; max-height: 560px; width: auto; height: auto; display: block; box-shadow: 0 20px 40px rgba(44,44,42,0.13); }
     .ueber-tag { position: absolute; bottom: 2.5rem; right: 0; z-index: 2; background: var(--sage); color: white; padding: 0.85rem 1.3rem; display: flex; flex-direction: column; gap: 0.2rem; }
     .ueber-tag-name { font-size: 0.82rem; letter-spacing: 0.08em; font-weight: 500; }
     .ueber-tag-role { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
@@ -391,7 +391,7 @@
   <div class="inner">
     <div class="ueber-grid reveal">
       <div class="ueber-img-wrap">
-        <picture><source srcset="assets/portrait-nobg.webp" type="image/webp"><img src="assets/portrait-nobg.png" alt="Lisa Posch, Physiotherapeutin in Wien" width="933" height="1400" /></picture>
+        <picture><source srcset="assets/portrait.webp" type="image/webp"><img src="assets/portrait.jpg" alt="Lisa Posch, Physiotherapeutin in Wien" width="933" height="1400" /></picture>
         <div class="ueber-tag">
           <span class="ueber-tag-name">Lisa Posch, BSc</span>
           <span class="ueber-tag-role">Physiotherapeutin</span>
@@ -409,7 +409,7 @@
           <span class="ueber-cv-label">Werdegang</span>
           <div class="ueber-cv-item"><span>Seit 2022</span><span>Krankenhaus Nord – Orthopädie &amp; Traumatologie</span></div>
           <div class="ueber-cv-item"><span>2023</span><span>Medizinische Trainingstherapie – Grundlagen</span></div>
-          <div class="ueber-cv-item"><span>2024–2026</span><span>Sportphysiotherapie in Ausbildung</span></div>
+          <div class="ueber-cv-item"><span>2024–2026</span><span>Sportphysiotherapie – Ausbildung abgeschlossen</span></div>
         </div>
       </div>
     </div>
