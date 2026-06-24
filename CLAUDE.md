@@ -50,7 +50,9 @@ Always weigh these when making architecture decisions:
 1. **Plan Mode first** for any non-trivial change — propose approach, wait for approval
 2. **Implement**
 3. **Self-review checklist** (see below)
-4. **Report** what changed and what needs manual verification
+4. **Review** — zeige Änderungen, warte auf explizites "ok" bevor gepusht wird
+5. **Push** — erst nach Freigabe, da die Seite produktiv ist und automatisch deployed wird
+6. **Report** what changed and what needs manual verification
 
 ## Checklist After Every Change
 
