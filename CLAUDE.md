@@ -79,6 +79,7 @@ Always weigh these when making architecture decisions:
 | Google Fonts | Preconnect load | None |
 | Cloudflare Pages | Hosting + CDN | None (free tier) |
 | Cloudflare Workers | Only if added later | >100k req/day → cost |
+| Matomo | Analytics (Site ID 4, analytics.ederge.org) | None (self-hosted) |
 
 **Rule:** Before integrating any new external service or API, estimate the cost and name it explicitly before proceeding.
 
@@ -97,7 +98,7 @@ Always weigh these when making architecture decisions:
 - [x] **Domain: `www.lp-physiotherapie.at`** — set in canonical, og:url, og:image, JSON-LD, sitemap.xml, robots.txt
 - [x] **Adresse: Kenyongasse 3/3, 1070 Wien** — set in impressum.html, datenschutz.html, JSON-LD
 - [x] Set up Cloudflare Pages project and connect repo
-- [ ] Configure custom domain in Cloudflare DNS (waiting for nameserver propagation)
+- [x] Configure custom domain in Cloudflare DNS
 - [ ] Verify Lighthouse scores (Performance ≥ 90, SEO ≥ 95, Accessibility ≥ 90)
 - [ ] Test Appointmed booking link end-to-end
 
