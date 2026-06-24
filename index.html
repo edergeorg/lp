@@ -711,6 +711,50 @@
     ticking = false;
   }
 
+  // Konami code easter egg: ↑↑↓↓←→←→BA
+  const KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','KeyB','KeyA'];
+  let ki = 0;
+  document.addEventListener('keydown', e => {
+    ki = e.code === KONAMI[ki] ? ki + 1 : (e.code === KONAMI[0] ? 1 : 0);
+    if (ki === KONAMI.length) { ki = 0; activateKonami(); }
+  });
+
+  function activateKonami() {
+    console.log('%c +30 Leben freigeschaltet ', 'background:#4f7152;color:white;padding:4px 10px;');
+    const toast = document.createElement('div');
+    toast.innerHTML = '<span style="font-family:Cormorant Garamond,serif;font-size:1.4rem;font-weight:300;">+30 Leben</span><br><span style="font-size:0.65rem;letter-spacing:0.2em;opacity:0.8;">KONAMI CODE AKTIV</span>';
+    Object.assign(toast.style, {
+      position:'fixed', bottom:'2.5rem', left:'50%', transform:'translateX(-50%) translateY(12px)',
+      background:'var(--charcoal)', color:'white', padding:'1rem 2.2rem', textAlign:'center',
+      zIndex:'9999', opacity:'0', transition:'opacity 0.35s, transform 0.35s', pointerEvents:'none',
+      lineHeight:'1.6'
+    });
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+    }));
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 350);
+    }, 2800);
+    for (let i = 0; i < 22; i++) setTimeout(spawnLeaf, i * 110);
+  }
+
+  function spawnLeaf() {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '80 4 32 36');
+    svg.setAttribute('width', '22');
+    svg.setAttribute('height', '26');
+    svg.innerHTML = '<path d="M100 8C90 16 86 28 96 38C96 38 108 36 106 24C104 14 96 8 92 8" stroke="#7a9e7e" stroke-width="2" stroke-linecap="round" fill="rgba(122,158,126,0.15)"/><path d="M92 8C94 16 96 24 102 32" stroke="#7a9e7e" stroke-width="1.8" stroke-linecap="round" fill="none"/>';
+    Object.assign(svg.style, { position:'fixed', left: Math.random() * (window.innerWidth - 30) + 'px', top:'-30px', zIndex:'9998', pointerEvents:'none' });
+    document.body.appendChild(svg);
+    svg.animate([
+      { transform:'translateY(0) translateX(0) rotate(0deg)', opacity:1 },
+      { transform:`translateY(${window.innerHeight + 60}px) translateX(${(Math.random()-0.5)*160}px) rotate(${(Math.random()-0.5)*720}deg)`, opacity:0.5 }
+    ], { duration: 1800 + Math.random() * 1400, easing:'cubic-bezier(0.25,0.46,0.45,0.94)', fill:'forwards' }).onfinish = () => svg.remove();
+  }
+
   // Easter egg for curious developers
   console.log(
     '%c Lisa Posch Physiotherapie %c\n%c Hallo, neugierige Entwickler:in!\n\n Design & Umsetzung: Georg Eder\n hallo@ederge.org',
